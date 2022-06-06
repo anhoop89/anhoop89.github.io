@@ -3,21 +3,19 @@
     height: 650px;
 }
 
+/* adding background for the slides. */
 .project1{
   background: url(/img/bg-p1.png);
-  /* border-radius: 30px; */
 }
 
 .project2{
     background: url(/img/bg-p2.png);
-
 }
 
 .project3{
     background: url(/img/bg-p3.png);
-
-
 }
+
 .project1, .project2, .project3 {
     background-size: cover;
     background-position: center;
@@ -56,7 +54,7 @@
     background-size: 100%;
 }
 
-    
+ /* reponsive */
 @media (min-width: 1244px) {
     .carousel-inner  {
         height: 650px;
