@@ -32,17 +32,16 @@ const checkForm =
         let form = document.querySelector('form');
         let check_message = document.getElementById('message');
 
-
         form.addEventListener('submit', handleSubmit);
-
         function handleSubmit(event) {
-
             //check input is empty or not. 
             if (!isNaN(form.name.value) && !isNaN(form.email.value) && !isNaN(check_message.value)) {
                 alert("You can't submit it with an empty form. Please check again!");
                 console.warn("You must enter some data to submit this form");
             }
             else {
+                // check variable to check the entering form from user. 
+                // 0 is no errors, > 0 is catching errors.
                 let check = 0;
                 console.log("======= Form Submission =======");
                 //Username
@@ -66,6 +65,8 @@ const checkForm =
                 }
                 else
                     console.log("\tMessage      : " + check_message.value)
+                
+                // checking if the user entered all the info or not. If not, send a notice. if yes, give succesful notice.
                 if (check === 0)
                     alert("Succefully sent the message. See you soon!");
                 else
