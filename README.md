@@ -9,7 +9,6 @@ It has only one html file to run all the sections in the porfolio. Bascially, al
 - CSS: navbar.css, slider.css, and style.css
 - js: script.js
 - img: images used for the site
-- resume: resume.pdf
 - main.html stays alone without a folder. 
 The reason I break them down into a few files because It helps me to reduce the numbers of line of code in each file. It's easier for me to maintain and fix my code when getting a bug. 
 2. [***BOOSTRAP***](https://getbootstrap.com/) : I used their classes from this tool to build most of my section. It helps me a lot with styling. 
