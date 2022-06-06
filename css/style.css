@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic Coding', monospace;
+    scroll-behavior: smooth;
+    
+}
+
+section {
+    padding: 150px 20%;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* intro section */
+.intro {
+    padding-top: 185px;
+}
+
+.intro {
+    background: url(/img/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+
+}
+
+.ava {
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.1);
+}
+
+.intro .text-1 {
+    font-size: 2em;
+    font-weight: 500; 
+    --color-2: #dda15e;
+    --color-1: #8ecae6;
+    --color-3: #ccd5ae;
+}
+
+.intro .text-2 {
+    font-size: 24px;
+    font-weight: 900;    
+    --color-2: #dda15e;
+    --color-1: #8ecae6;
+    --color-3: #ccd5ae;
+}
+
+.intro  .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+    font-weight: 1200;  
+    font-weight: bold;
+    --color-2: #4d194d;
+    --color-3: #e63946;
+    --color-1: #3a86ff;
+}
+
+.text {
+    animation: 5s linear infinite change_color;
+  }
+   
+  @keyframes change_color{
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-1)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+/* about me section */
+.about {
+    font-size: 1.3em;
+    align-items: center;
+}
+
+.about-img img {
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.1);
+}
+
+/* skills section */
+.skills {
+    font-size: 1.3em;
+    background: url(/img/section.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.skills .container {
+    padding: 20px 20px;
+
+}
+
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.skills .progress .skill {
+    padding: 10px 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: #deeaf0;
+}
+
+.skills .progress-bar {
+    height: 30px;
+    background-color: #0e85bd;
+    opacity: 35%;
+    animation: 4s ease-out 0s infinite loadingBar;
+}
+
+@keyframes loadingBar {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.form {
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 100%;
+    width: 400px;
+    font-family: monospace;
+
+}
+
+/* ---set up border styling */
+
+.form .form-control {
+    border: 1px solid #3d405b;
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.1);
+    border-radius: 20px;
+}
+
+.form .form-control:hover {
+    box-shadow: 0 0 5px 1px #4ecfe6;
+}
+
+.form .form-group {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.form h1 {
+    margin: 5px 0 25px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.btn {
+    justify-content: center;
+    width: 10vh;
+}
+
+.map-setup {
+    display: flex;
+}
+
+/* testing  social media */
+
+.social-media {
+    display: inline-flex;
+    list-style: none;
+}
+
+.social-media .icon {
+    position: relative;
+    justify-content: center;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.1);
+    cursor: pointer;
+    background: #caf0f8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 15px;   
+    padding: 6px 12px;
+    border-radius: 8px;
+    opacity: 0;
+    box-shadow: 0 10px 20px rgba(14, 13, 13, 0.1);
+    background: #fefafa;
+    color: #f8f8f8;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;  
+    height: 5px;
+    width: 5px;
+    bottom: -3px;
+    left: 50%;
+    background: #ffffff;   
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+    visibility: visible;
+    pointer-events: auto;
+    top: -45px;
+    opacity: 1;  
+}
+
+.icon:hover span,
+.icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.facebook:hover,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before {
+    color: #ffffff;
+    background: #1a6ddb;
+
+}
+
+.twitter:hover,
+.twitter:hover .tooltip,
+.twitter:hover .tooltip::before {
+    color: #ffffff;
+    background: #26a0ec;
+
+}
+
+.instagram:hover,
+.instagram:hover .tooltip,
+.instagram:hover .tooltip::before {
+    color: #ffffff;
+    background: #e38d50;
+}
+
+.github:hover,
+.github:hover .tooltip,
+.github:hover .tooltip::before {
+    color: #ffffff;
+    background: #373636;
+}
+
+.linkedin:hover,
+.linkedin:hover .tooltip,
+.linkedin:hover .tooltip::before {
+    color: #ffffff;
+    background: #52adfc;
+
+}
+
+/* contact section */
+#contact_section {
+    background: url(/img/near-footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding: 100px 15% 200px 15%; */
+    margin-top: 10px;
+}
+
+/* footer */
+.footer-setup {
+    background: url(/img/footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bottom_border {
+    margin: auto;
+    width: 90%;
+    border-bottom: 1px solid #c9c9c9;
+    transition: 1s ease-in-out;
+    opacity: 80%;
+}
+/* footer */
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    background: #f1f1f1;
+    margin-bottom: 2rem;
+}
+
+.card img {
+    height: 400px;
+    width: 100%;
+}
+
+/* badge-setup */
+.badge-setup {
+
+    width: 170px;
+    height: 50px;
+    background: #f4a261;
+    border: .5px solid #fafbc9;
+    margin-bottom: 15px;
+    border: 2px solid #344e41;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}

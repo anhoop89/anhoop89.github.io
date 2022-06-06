@@ -1,0 +1,214 @@
+/* setting up navbar menu and hamburger */
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 8%;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.5em;
+    transition: .3s;
+    /* border: 1px solid black; */
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    padding-top: 2px;
+    opacity: 70%;
+
+}
+
+.menu-list:hover {
+    opacity: 90%;
+
+}
+
+.menu-list .home {
+    color: rgb(209, 24, 24);
+}
+
+/* using relative here to let a:hover::after for absolute */
+.menu-list li {
+    position: relative;
+}
+
+.menu-list a {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #3a5a40;
+}
+
+.menu-list a:hover {
+    transition: ease 1s;
+    /* background: lightgoldenrodyellow; */
+    color: red;
+}
+
+.menu-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: red;
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+}
+
+.menu-list a:hover:after {
+    width: 100%;
+    transition: ease .40s;
+
+}
+
+/* hambuger menu*/
+
+/*menu-list btn styling*/
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    background: scroll;
+    border: 2px outset rgb(129, 178, 32);
+    border-radius: 20px;
+}
+
+.menu-btn:hover {
+    transform: rotate(0.5turn) translate(10%, -5%);
+}
+
+/* sticky bar */
+
+.navbar.sticky {
+    background: #fefae0;
+    padding: 5px 13%;
+    transition: all .1s ease-in-out;
+    background: url(/img/navbar2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+/* the bar line - hambuger*/
+.bar {
+    display: block;
+    width: 30px;
+    height: 5px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(40, 130, 127);    
+}
+
+
+@media (max-width: 1440px) {
+    .navbar.sticky {
+        padding: 10px 50px;
+    }
+    .menu-list a {
+        padding-right: 5px;
+    }
+
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar .menu-list {
+        position: absolute;
+        flex-direction: column;
+        padding: 40px 0 40px 100px;
+        margin-top: 90px;
+        opacity: 100%;
+        text-align: left;
+        width: 100%;
+        right: -100%;
+        top: 0;
+        gap: 0;
+        background: rgb(202, 190, 158);
+        background: url(/img/navbar3.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .40s ease-in-out;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+
+    .navbar .menu-list a {
+        display: block;
+    }
+
+    .navbar .menu-list a:hover {
+        background: rgb(249, 218, 185);
+        border-radius: 50px;
+    }
+
+    .menu-list.active {
+        right: 0;
+    }
+
+    .menu-list li {
+        display: block;
+    }
+
+    .menu-list a:hover {
+        background-color: black;
+    }
+
+    .menu-list li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width:600px) {
+    .navbar {
+        margin: 0;
+        padding-left: 1%;
+        padding-right: 100px;
+        /* border: 1px solid black; */
+    }
+    .navbar.sticky {
+        display: flex;
+        justify-content: space-between;   
+        padding-left: 1%;
+        padding-right: 20%;
+         
+    }
+
+    section{
+        display: block;
+        padding: 100px 1%;
+        /* border: 1px solid black; */
+    }
+
+}
+
+@media (max-width: 414px) {
+  
+}
