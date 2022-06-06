@@ -12,24 +12,16 @@
     right: 0;
     font-size: 1.5em;
     transition: .3s;
-    /* border: 1px solid black; */
 }
 
 .menu-list {
     display: flex;
     list-style-type: none;
-    padding-top: 2px;
     opacity: 70%;
-
 }
 
 .menu-list:hover {
     opacity: 90%;
-
-}
-
-.menu-list .home {
-    color: rgb(209, 24, 24);
 }
 
 /* using relative here to let a:hover::after for absolute */
@@ -67,7 +59,6 @@
 }
 
 /* hambuger menu*/
-
 /*menu-list btn styling*/
 .menu-btn {
     display: none;
