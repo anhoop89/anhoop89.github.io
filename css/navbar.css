@@ -181,7 +181,6 @@
         margin: 0;
         padding-left: 1%;
         padding-right: 100px;
-        /* border: 1px solid black; */
     }
     .navbar.sticky {
         display: flex;
@@ -194,11 +193,6 @@
     section{
         display: block;
         padding: 100px 1%;
-        /* border: 1px solid black; */
     }
 
-}
-
-@media (max-width: 414px) {
-  
 }
