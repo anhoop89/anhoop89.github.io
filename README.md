@@ -34,6 +34,7 @@ The reason I break them down into a few files because It helps me to reduce the 
       - To use this library, I need to link them into my main.html:
 
         ```html
+
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
@@ -47,6 +48,7 @@ The reason I break them down into a few files because It helps me to reduce the 
       - To use this library, I need to link them into my main.html:
          
          ```html
+
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Nanum+Gothic+Coding&display=swap"
