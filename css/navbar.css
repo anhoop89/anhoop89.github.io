@@ -148,7 +148,6 @@
         right: -100%;
         top: 0;
         gap: 0;
-        background: rgb(202, 190, 158);
         background: url(/img/navbar3.png);
         background-size: cover;
         background-position: center;
@@ -162,7 +161,7 @@
     }
 
     .navbar .menu-list a:hover {
-        background: rgb(249, 218, 185);
+        background: rgb(255, 224, 191);
         border-radius: 50px;
     }
 
