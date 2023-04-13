@@ -1,4 +1,7 @@
-<a href="https://freeimage.host/i/Hv5cAAJ"><img src="https://iili.io/Hv5cAAJ.md.png" alt="Hv5cAAJ.md.png" border="0"></a>
+<div align="center">
+  <img src="https://iili.io/Hv5cAAJ.png" alt="Image Title" width="500"/>
+</div>
+
 # .My personal porfolio
 The website is my personal porfolio. It's avalaible at https://anhoop89.github.io/main.html
 # .Tools
